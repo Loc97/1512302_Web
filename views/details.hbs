@@ -1,0 +1,29 @@
+{{#article}}
+<section id="content">
+    <div id="frame">
+        <img src="{{imagepath}}" alt="{{id}}">
+    </div>
+    <section id="title">
+        <h1>{{title}}</h1>
+    </section>
+    <p>{{summary}} {{description}}</p>
+</section>
+
+<form action="/articles/{{id}}" method="post" class="input-group mb-3" id="post">
+    <input type="text" class="form-control" placeholder="Comment here" name="comment" required>
+    <div class="input-group-append">
+        <button class="btn btn-outline-success" type="submit">Post</button>
+    </div>
+</form>
+
+<section id="comment">
+    {{#each Comments}}
+    <div class="comment">
+        <p>Author - {{comment}} - {{updatedAt}}</p>
+        <a href="/articles/{{../id}}/{{id}}" class="btn btn-sm btn-danger">X</a>
+    </div>
+    {{/each}}
+</section>
+{{/article}}
+
+<link rel="stylesheet" type="text/css" media="screen" href="/styles/details.css" />

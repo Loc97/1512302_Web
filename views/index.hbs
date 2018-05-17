@@ -1,0 +1,18 @@
+<section id="title">
+    <h1>User Experience Design</h1>
+    <h1>for Web & Mobile</h1>
+</section>
+
+<section id="content">
+    {{#each articles}}
+    <div id="{{id}}" class="content">
+        <a href="/articles/{{id}}">
+            <img src="{{imagepath}}" alt="">
+        </a>
+        <h3>{{title}}</h3>
+        <p>{{summary}}</p>
+    </div>
+    {{/each}}
+</section>
+
+<link rel="stylesheet" type="text/css" media="screen" href="/styles/index.css"/>

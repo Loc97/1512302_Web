@@ -1,0 +1,27 @@
+{
+  "name": "1512302",
+  "version": "1.0.0",
+  "description": "nodejs_postgres_sequelize",
+  "main": "index.js",
+  "scripts": {
+    "test": "nothing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "master"
+  },
+  "keywords": [
+    "postgres"
+  ],
+  "author": "Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-handlebars-paginate": "^1.0.3",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.7"
+  }
+}
