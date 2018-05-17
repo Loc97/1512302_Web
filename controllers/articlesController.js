@@ -12,7 +12,6 @@ controller.getAll = function(callback){
 
 controller.getById = function(id, callback){
     models.Article
-    .findAll()
     .findOne({
         where: {id: id},
         include: [models.Comment]

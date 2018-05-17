@@ -13,6 +13,8 @@ var hbs = expressHbs.create({
 	}
 });
 
+hbs.handlebars.registerHelper('paginateHelper', paginateHelper.createPagination);
+
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

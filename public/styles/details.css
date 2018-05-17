@@ -55,4 +55,5 @@
 
 .comment>a{
     float: left;
+    margin: -4px 5px 0 0;
 }
