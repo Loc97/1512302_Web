@@ -51,9 +51,8 @@
 
 .comment>p{
     float: left;
-    width: 95%;
 }
 
 .comment>a{
-    float: right;
+    float: left;
 }

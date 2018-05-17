@@ -2,7 +2,7 @@ var controller = {};
 
 var models = require('../models');
 
-controller.add = function(aid, mess){
+controller.add = function(aid, mess, callback){
     models.Comment
     .create({
         comment: mess,
@@ -10,6 +10,9 @@ controller.add = function(aid, mess){
         createAt: Date(),
         updateAt: Date()
     })
+    .then(function(comment){
+        callback(comment);
+    });
 };
 
 controller.delete = function(id, callback){

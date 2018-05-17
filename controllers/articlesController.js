@@ -12,6 +12,7 @@ controller.getAll = function(callback){
 
 controller.getById = function(id, callback){
     models.Article
+    .findAll()
     .findOne({
         where: {id: id},
         include: [models.Comment]
@@ -20,5 +21,18 @@ controller.getById = function(id, callback){
         callback(article);
     })
 };
+
+controller.search = function(string, callback){
+    console.log(string);
+    models.Article  
+    .findAll({
+        where: {
+            $or: string
+        }
+    })
+    .then(function(articles){
+        callback(articles);
+    })
+}
 
 module.exports = controller;
